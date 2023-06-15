@@ -1,10 +1,10 @@
 ﻿@using EntityLayer.Concrete
 @model List<Reservation>
-@{ 
+@{
     ViewData["Title"] = "MyCurrentReservation";
-    Layout = "~/Views/Shared/_MemberLayout.cshtml"; 
-    
-    }
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+
+}
 
 
 
@@ -40,13 +40,14 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                    <tr>
-                        <td>@item.ReservationID</td>
-                        <td>@item.Destination.City</td>
-                        <td>@item.PersonCount</td>
-                        <td>@item.ReservastionDate</td>
-                        <td>@item.Status</td>
-                    </tr>}
+                                    <tr>
+                                        <td>@item.ReservationID</td>
+                                        <td>@item.Description</td>
+                                        <td>@item.PersonCount</td>
+                                        <td>@item.ReservastionDate</td>
+                                        <td>@item.Status</td>
+                                    </tr>
+                                }
 
                             </tbody>
                         </table>

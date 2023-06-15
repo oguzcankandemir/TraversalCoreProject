@@ -23,7 +23,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
         {
             MimeMessage mimeMessage = new MimeMessage();
 
-            MailboxAddress mailboxAddressFrom = new MailboxAddress("Admin", "traversalcore2@gmail.com");
+            MailboxAddress mailboxAddressFrom = new MailboxAddress("Admin", "oguzcankandemir966@gmail.com");
 
             mimeMessage.From.Add(mailboxAddressFrom);
 
@@ -38,11 +38,10 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
 
             SmtpClient client = new SmtpClient();
             client.Connect("smtp.gmail.com", 587, false);
-            client.Authenticate("traversalcore2@gmail.com", "fhvevuwmjwlkpnzm");
+            client.Authenticate("oguzcankandemir966@gmail.com", "fhvevuwmjwlkpnzm");
             client.Send(mimeMessage);
             client.Disconnect(true);
             return View();
         }
     }
 }
-//traversalcore2@gmail.com

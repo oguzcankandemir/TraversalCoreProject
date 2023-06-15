@@ -22,12 +22,12 @@
             </div>
             <div class="card-content collapse show">
                 <div class="card-body">
-                    <p class="card-text">Web Sitemiz Traversal üzerinde yer alan lokasyonlar içinde yeni bir rezervasyonu aşağıdaki panelden yapabilirsiniz. </p>
+                    <p class="card-text">Web Sitemiz BodrumKonserlerim üzerinde yer alan lokasyonlar içinde yeni bir rezervasyonu aşağıdaki panelden yapabilirsiniz. </p>
                     <form method="post">
-                        @*<div class="form-group">
-            @Html.Label("Lokasyon")
-            @Html.DropDownListFor(x => x.Destination, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
-        </div>*@
+                        <div class="form-group">
+                            @Html.Label("Lokasyon")
+                            @Html.DropDownListFor(x => x.Destination, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+                        </div>
                         <div class="form-group">
                             @Html.Label("Kişi Sayısı")
                             <input type="text" asp-for="PersonCount" class="form-control" />

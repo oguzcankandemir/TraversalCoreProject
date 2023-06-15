@@ -24,8 +24,8 @@ namespace TraversalCoreProje.Areas.Member.Controllers
         {
             _userManager = userManager;
         }
-
-        public async Task< IActionResult> MyCurrentReservation()
+        
+        public async Task<IActionResult> MyCurrentReservation()
         {
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
             var valuesList = reservationManager.GetListWithReservationByAccepted(values.Id);
@@ -60,7 +60,7 @@ namespace TraversalCoreProje.Areas.Member.Controllers
         [HttpPost]
         public IActionResult NewReservation(Reservation p)
         {
-            p.AppUserId = 4;
+            p.AppUserId = 2;
             p.Status = "Onay Bekliyor";
             reservationManager.TAdd(p);
             return RedirectToAction("MyCurrentReservation");

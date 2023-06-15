@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace BusinessLayer.Concrete
 
         public About TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _aboutDal.GetByID(id);
         }
 
         public List<About> TGetList()

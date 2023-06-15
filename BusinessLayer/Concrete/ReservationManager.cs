@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -20,8 +21,10 @@ namespace BusinessLayer.Concrete
 
         public List<Reservation> GetListWithReservationByAccepted(int id)
         {
-            return _reservationDal.GetListWithReservationByAccepted(id);
+            return _reservationDal.GetListByFilter(x => x.AppUserId == id);
         }
+
+    
 
         public List<Reservation> GetListWithReservationByPrevious(int id)
         {
@@ -40,22 +43,22 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Reservation t)
         {
-            throw new NotImplementedException();
+           _reservationDal.Delete(t);
         }
 
         public Reservation TGetByID(int id)
         {
-            throw new NotImplementedException();
+           return _reservationDal.GetByID(id);
         }
 
         public List<Reservation> TGetList()
         {
-            throw new NotImplementedException();
+            return _reservationDal.GetList();
         }
 
         public void TUpdate(Reservation t)
         {
-            throw new NotImplementedException();
+            _reservationDal.Update(t);
         }
     }
 }
