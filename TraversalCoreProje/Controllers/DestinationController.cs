@@ -25,7 +25,6 @@ namespace TraversalCoreProje.Controllers
             var values = destinationManager.TGetList();
             return View(values);
         }
-
         //[HttpGet]
         public async Task<IActionResult> DestinationDetails(int id)
         {

@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _guideDal = guideDal;
         }
 
+        public Task<Guide> GetGuideById(int guideID)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TAdd(Guide t)
         {
             _guideDal.Insert(t);

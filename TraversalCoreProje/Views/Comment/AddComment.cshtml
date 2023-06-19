@@ -1,5 +1,5 @@
-﻿@if (User.Identity.IsAuthenticated)
-{
+﻿@*@if (User.Identity.IsAuthenticated)
+{*@
 <div class="leave-comment-form mt-5" id="reply">
     <h4 class="side-title mb-2">Bir yorum bırakın</h4>
     <p class="mb-4">
@@ -17,8 +17,8 @@
         </div>
     </form>
 </div>
-}
+@*}
 else
 {
     <h2>Yorum yapabilmek için üye olmanız gerekli.</h2>
-}
+}*@

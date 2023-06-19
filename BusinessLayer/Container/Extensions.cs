@@ -27,6 +27,9 @@ namespace BusinessLayer.Container
             services.AddScoped<IDestinationService, DestinationManager>();
             services.AddScoped<IDestinationDal, EfDestinationDal>();
 
+            services.AddScoped<IKonserService, KonserManager>();
+            services.AddScoped<IKonserDal, EfKonserDal>();
+
             services.AddScoped<IAppUserService, AppUserManager>();
             services.AddScoped<IAppUserDal, EfAppUserDal>();
 

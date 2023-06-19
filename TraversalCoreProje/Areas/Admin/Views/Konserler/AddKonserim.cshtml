@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.Konser
+@{
+    ViewData["Title"] = "AddKonserim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Konser Oluşturma Sayfası</h1>
+<form  method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        @Html.Label("Şehir veya club ismi")
+        <input type="text" asp-for="City" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama")
+        <input type="text" asp-for="DayNight" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Fiyat")
+        <input type="text" asp-for="Price" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Ana Görsel")
+        <input type="file"name="formFile" asp-for="Image" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Kapasite")
+        <input type="text" asp-for="Capacity" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-outline-primary">Oluştur</button>
+</form>
+
