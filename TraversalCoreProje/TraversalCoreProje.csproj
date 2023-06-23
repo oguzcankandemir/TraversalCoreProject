@@ -276,6 +276,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Member\Data\" />
+    <Folder Include="Logs\" />
     <Folder Include="wwwroot\img\" />
     <Folder Include="wwwroot\pdfreports\" />
     <Folder Include="wwwroot\userimages\" />
