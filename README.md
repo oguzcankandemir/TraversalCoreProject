@@ -21,3 +21,42 @@
 📋 Logging: Recording errors and events.
 🌐 API Communication: Integrations for data exchange through APIs.
 🚀 Outcome: This project offers a comprehensive digital solution for tourism companies. It provides user-friendly interfaces, real-time notifications, and flexible data management to effectively manage reservation processes.
+
+                +---------------------------+
+                |          |
+                |      (Presentation Layer)  |
+                |  - Member Panel            |
+                |  - Admin Panel             |
+                |  - Showcase Panel          |
+                +---------------------------+
+                           |
+                           |  Dependency Injection
+                           v
+                +---------------------------+
+                |    |
+                |    (Application Layer)     |
+                |  - Services                |
+                |  - MediatR & CQRS          |
+                +---------------------------+
+                           |
+                           |  Dependency Injection
+                           v
+                +---------------------------+
+                |   |
+                |   (Infrastructure Layer)   |
+                |  - Data Access              |
+                |  - SignalR                  |
+                |  - API Communication        |
+                +---------------------------+
+                           |
+                           |  Database Access
+                           v
+                +---------------------------+
+                |            |
+                |      (Domain Layer)         |
+                |  - Entities                 |
+                |  - Repositories             |
+                |  - Unit of Work             |
+                |  - Fluent Validation        |
+                +---------------------------+
+
